@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Client.gd" type="Script" id=1]
+[ext_resource path="res://obstacle.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.0226, 7.88991 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 0.498249, -0.166082 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 61.4894, 40.1665 )
+script = ExtResource( 1 )
+
+[node name="obstacle" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 0.0595779, 0.0768623 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 1 )
